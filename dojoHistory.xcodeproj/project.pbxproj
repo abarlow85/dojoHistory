@@ -196,6 +196,12 @@
 				TargetAttributes = {
 					70FA3E631CE5057200509F40 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = MRF297Y76J;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					70FA3E7A1CE5057200509F40 = {
 						CreatedOnToolsVersion = 7.3;
@@ -486,6 +492,7 @@
 				70FA3E911CE5057200509F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70FA3E921CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				70FA3E941CE5057200509F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70FA3E951CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +510,7 @@
 				70FA3E971CE5057200509F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
