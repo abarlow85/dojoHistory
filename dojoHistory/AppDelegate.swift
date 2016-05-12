@@ -17,12 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //function defined at the bottom
+        registerForPushNotifications(application)
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 1
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -43,6 +46,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+//    // this method provides us with what permissions the user currently has allowed for our app
+//    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+//        if notificationSettings.types != .None {
+//            // if user has granted notification permission, we directly call registerForRemoteNotifications()
+//            application.registerForRemoteNotifications()
+//        }
+//    }
+//    // calls for didRegisterForRemoteNotificationsWithDeviceToken when registration is successful, otherwise calls WithErrors
+//    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+//        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
+//        var tokenString = ""
+//        
+//        for i in 0..<deviceToken.length {
+//            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+//        }
+//        print("Device Token:", tokenString)
+//    }
+//    
+//    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+//        print("Failed to register:", error)
+//    }
 
     // MARK: - Core Data stack
 
@@ -105,6 +130,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    //registering for push notifications for the user
+    func registerForPushNotifications(application: UIApplication) {
+        let viewAction = UIMutableUserNotificationAction()
+        viewAction.identifier = "VIEW_IDENTIFIER"
+        viewAction.title = "View"
+        viewAction.activationMode = .Foreground
+        let placesCategory = UIMutableUserNotificationCategory()
+        placesCategory.identifier = "PLACES_CATEGORY"
+        placesCategory.setActions([viewAction], forContext: .Default)
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert], categories: [placesCategory])
+        application.registerUserNotificationSettings(notificationSettings)
     }
 
 }
