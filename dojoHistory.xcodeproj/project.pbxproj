@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70FA3E681CE5057200509F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E671CE5057200509F40 /* AppDelegate.swift */; };
+		70FA3E6A1CE5057200509F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E691CE5057200509F40 /* ViewController.swift */; };
+		70FA3E6D1CE5057200509F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FA3E6B1CE5057200509F40 /* Main.storyboard */; };
+		70FA3E701CE5057200509F40 /* dojoHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E6E1CE5057200509F40 /* dojoHistory.xcdatamodeld */; };
+		70FA3E721CE5057200509F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70FA3E711CE5057200509F40 /* Assets.xcassets */; };
+		70FA3E751CE5057200509F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FA3E731CE5057200509F40 /* LaunchScreen.storyboard */; };
+		70FA3E801CE5057200509F40 /* dojoHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E7F1CE5057200509F40 /* dojoHistoryTests.swift */; };
+		70FA3E8B1CE5057200509F40 /* dojoHistoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E8A1CE5057200509F40 /* dojoHistoryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70FA3E7C1CE5057200509F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70FA3E5C1CE5057200509F40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70FA3E631CE5057200509F40;
+			remoteInfo = dojoHistory;
+		};
+		70FA3E871CE5057200509F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70FA3E5C1CE5057200509F40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70FA3E631CE5057200509F40;
+			remoteInfo = dojoHistory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70FA3E641CE5057200509F40 /* dojoHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dojoHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FA3E671CE5057200509F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70FA3E691CE5057200509F40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70FA3E6C1CE5057200509F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70FA3E6F1CE5057200509F40 /* dojoHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dojoHistory.xcdatamodel; sourceTree = "<group>"; };
+		70FA3E711CE5057200509F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70FA3E741CE5057200509F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70FA3E761CE5057200509F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FA3E7B1CE5057200509F40 /* dojoHistoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dojoHistoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FA3E7F1CE5057200509F40 /* dojoHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dojoHistoryTests.swift; sourceTree = "<group>"; };
+		70FA3E811CE5057200509F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70FA3E861CE5057200509F40 /* dojoHistoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dojoHistoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70FA3E8A1CE5057200509F40 /* dojoHistoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dojoHistoryUITests.swift; sourceTree = "<group>"; };
+		70FA3E8C1CE5057200509F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70FA3E611CE5057200509F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E781CE5057200509F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E831CE5057200509F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70FA3E5B1CE5057200509F40 = {
+			isa = PBXGroup;
+			children = (
+				70FA3E661CE5057200509F40 /* dojoHistory */,
+				70FA3E7E1CE5057200509F40 /* dojoHistoryTests */,
+				70FA3E891CE5057200509F40 /* dojoHistoryUITests */,
+				70FA3E651CE5057200509F40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		70FA3E651CE5057200509F40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70FA3E641CE5057200509F40 /* dojoHistory.app */,
+				70FA3E7B1CE5057200509F40 /* dojoHistoryTests.xctest */,
+				70FA3E861CE5057200509F40 /* dojoHistoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70FA3E661CE5057200509F40 /* dojoHistory */ = {
+			isa = PBXGroup;
+			children = (
+				70FA3E671CE5057200509F40 /* AppDelegate.swift */,
+				70FA3E691CE5057200509F40 /* ViewController.swift */,
+				70FA3E6B1CE5057200509F40 /* Main.storyboard */,
+				70FA3E711CE5057200509F40 /* Assets.xcassets */,
+				70FA3E731CE5057200509F40 /* LaunchScreen.storyboard */,
+				70FA3E761CE5057200509F40 /* Info.plist */,
+				70FA3E6E1CE5057200509F40 /* dojoHistory.xcdatamodeld */,
+			);
+			path = dojoHistory;
+			sourceTree = "<group>";
+		};
+		70FA3E7E1CE5057200509F40 /* dojoHistoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				70FA3E7F1CE5057200509F40 /* dojoHistoryTests.swift */,
+				70FA3E811CE5057200509F40 /* Info.plist */,
+			);
+			path = dojoHistoryTests;
+			sourceTree = "<group>";
+		};
+		70FA3E891CE5057200509F40 /* dojoHistoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70FA3E8A1CE5057200509F40 /* dojoHistoryUITests.swift */,
+				70FA3E8C1CE5057200509F40 /* Info.plist */,
+			);
+			path = dojoHistoryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70FA3E631CE5057200509F40 /* dojoHistory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FA3E8F1CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistory" */;
+			buildPhases = (
+				70FA3E601CE5057200509F40 /* Sources */,
+				70FA3E611CE5057200509F40 /* Frameworks */,
+				70FA3E621CE5057200509F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dojoHistory;
+			productName = dojoHistory;
+			productReference = 70FA3E641CE5057200509F40 /* dojoHistory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70FA3E7A1CE5057200509F40 /* dojoHistoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FA3E921CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryTests" */;
+			buildPhases = (
+				70FA3E771CE5057200509F40 /* Sources */,
+				70FA3E781CE5057200509F40 /* Frameworks */,
+				70FA3E791CE5057200509F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70FA3E7D1CE5057200509F40 /* PBXTargetDependency */,
+			);
+			name = dojoHistoryTests;
+			productName = dojoHistoryTests;
+			productReference = 70FA3E7B1CE5057200509F40 /* dojoHistoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70FA3E851CE5057200509F40 /* dojoHistoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FA3E951CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryUITests" */;
+			buildPhases = (
+				70FA3E821CE5057200509F40 /* Sources */,
+				70FA3E831CE5057200509F40 /* Frameworks */,
+				70FA3E841CE5057200509F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70FA3E881CE5057200509F40 /* PBXTargetDependency */,
+			);
+			name = dojoHistoryUITests;
+			productName = dojoHistoryUITests;
+			productReference = 70FA3E861CE5057200509F40 /* dojoHistoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70FA3E5C1CE5057200509F40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alec Barlow";
+				TargetAttributes = {
+					70FA3E631CE5057200509F40 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					70FA3E7A1CE5057200509F40 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 70FA3E631CE5057200509F40;
+					};
+					70FA3E851CE5057200509F40 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 70FA3E631CE5057200509F40;
+					};
+				};
+			};
+			buildConfigurationList = 70FA3E5F1CE5057200509F40 /* Build configuration list for PBXProject "dojoHistory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70FA3E5B1CE5057200509F40;
+			productRefGroup = 70FA3E651CE5057200509F40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70FA3E631CE5057200509F40 /* dojoHistory */,
+				70FA3E7A1CE5057200509F40 /* dojoHistoryTests */,
+				70FA3E851CE5057200509F40 /* dojoHistoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70FA3E621CE5057200509F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FA3E751CE5057200509F40 /* LaunchScreen.storyboard in Resources */,
+				70FA3E721CE5057200509F40 /* Assets.xcassets in Resources */,
+				70FA3E6D1CE5057200509F40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E791CE5057200509F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E841CE5057200509F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70FA3E601CE5057200509F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FA3E6A1CE5057200509F40 /* ViewController.swift in Sources */,
+				70FA3E701CE5057200509F40 /* dojoHistory.xcdatamodeld in Sources */,
+				70FA3E681CE5057200509F40 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E771CE5057200509F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FA3E801CE5057200509F40 /* dojoHistoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70FA3E821CE5057200509F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FA3E8B1CE5057200509F40 /* dojoHistoryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70FA3E7D1CE5057200509F40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70FA3E631CE5057200509F40 /* dojoHistory */;
+			targetProxy = 70FA3E7C1CE5057200509F40 /* PBXContainerItemProxy */;
+		};
+		70FA3E881CE5057200509F40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70FA3E631CE5057200509F40 /* dojoHistory */;
+			targetProxy = 70FA3E871CE5057200509F40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70FA3E6B1CE5057200509F40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70FA3E6C1CE5057200509F40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70FA3E731CE5057200509F40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70FA3E741CE5057200509F40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70FA3E8D1CE5057200509F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70FA3E8E1CE5057200509F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70FA3E901CE5057200509F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dojoHistory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		70FA3E911CE5057200509F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dojoHistory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		70FA3E931CE5057200509F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = dojoHistoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dojoHistory.app/dojoHistory";
+			};
+			name = Debug;
+		};
+		70FA3E941CE5057200509F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = dojoHistoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dojoHistory.app/dojoHistory";
+			};
+			name = Release;
+		};
+		70FA3E961CE5057200509F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = dojoHistoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dojoHistory;
+			};
+			name = Debug;
+		};
+		70FA3E971CE5057200509F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = dojoHistoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abarlowcodes.dojoHistoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dojoHistory;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70FA3E5F1CE5057200509F40 /* Build configuration list for PBXProject "dojoHistory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FA3E8D1CE5057200509F40 /* Debug */,
+				70FA3E8E1CE5057200509F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70FA3E8F1CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FA3E901CE5057200509F40 /* Debug */,
+				70FA3E911CE5057200509F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70FA3E921CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FA3E931CE5057200509F40 /* Debug */,
+				70FA3E941CE5057200509F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		70FA3E951CE5057200509F40 /* Build configuration list for PBXNativeTarget "dojoHistoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70FA3E961CE5057200509F40 /* Debug */,
+				70FA3E971CE5057200509F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70FA3E6E1CE5057200509F40 /* dojoHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70FA3E6F1CE5057200509F40 /* dojoHistory.xcdatamodel */,
+			);
+			currentVersion = 70FA3E6F1CE5057200509F40 /* dojoHistory.xcdatamodel */;
+			path = dojoHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 70FA3E5C1CE5057200509F40 /* Project object */;
+}
