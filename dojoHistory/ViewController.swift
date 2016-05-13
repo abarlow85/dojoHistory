@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
  
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
+    var annotations = [MKPointAnnotation]()
 
     
     //    var didLoad = false
@@ -53,9 +54,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        mapView.userTrackingMode = .Follow
         
         //build annotation pins
-        var annotations = [MKPointAnnotation]()
+//        var annotations = [MKPointAnnotation]()
         for dictionary in pointsOfInterst {
             let latitude = CLLocationDegrees(dictionary["Latitude"] as! Double!)
             let longitude = CLLocationDegrees(dictionary["Longitude"] as! Double!)
@@ -91,15 +93,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         } else {
             pin!.annotation = annotation
         }
+        
         return pin
     }
     //Find users locations
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
         self.mapView.setRegion(region, animated: true)
+        
         self.locationManager.stopUpdatingLocation()
+        //comparing distance between user and pin...not functional
+        for landmark in annotations {
+            print("in here")
+            let pin = CLLocation(latitude: landmark.coordinate.latitude, longitude: landmark.coordinate.longitude)
+            let user = self.mapView.userLocation.location
+            print(user)
+//            if let user = mapView.userLocation.location {
+//                print(user)
+//                if pin.distanceFromLocation(user) < 100000 {
+//                    print(landmark.title)
+//                }
+//            }
+        }
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
