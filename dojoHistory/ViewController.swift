@@ -15,7 +15,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
  
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    var pointsOfInterst = [[String:Double]]()
 
     
     //    var didLoad = false
@@ -43,7 +42,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         super.viewDidLoad()
         
         let model = LocationModel()
-        let pointsOfInterst = model.data
+        let pointsOfInterst = model.data as NSArray
         mapView.delegate = self
         
         self.locationManager.delegate = self
@@ -54,25 +53,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         //build annotation pins
         var annotations = [MKPointAnnotation]()
-        for dictionary in pointsOfInterst {
-            let latitude = CLLocationDegrees(dictionary["Latitude"] as! Double!)
-            let longitude = CLLocationDegrees(dictionary["Longitude"] as! Double!)
-            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            let name = dictionary["name"] as! String!
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            annotation.title = "\(name)"
-            annotations.append(annotation)
-        }
-        //        print(annotations)
-        mapView.addAnnotations(annotations)
+//        for dictionary in pointsOfInterst {
+//            let latitude = CLLocationDegrees(dictionary["Latitude"] as! Double!)
+//            let longitude = CLLocationDegrees(dictionary["Longitude"] as! Double!)
+//            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//            let name = dictionary["name"] as! String!
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = coordinate
+//            annotation.title = "\(name)"
+//            annotations.append(annotation)
+//        }
+//        //        print(annotations)
+//        mapView.addAnnotations(annotations)
         
     }
-
-    func didReceiveCoords(location: NSDictionary){
-        pointsOfInterst.append(location as! [String : Double])
-        print(pointsOfInterst)
-    }
+//
+//    func didReceiveCoords(location: NSDictionary){
+//        pointsOfInterst.append(location as! [String : Double])
+//        print(pointsOfInterst)
+//    }
     
 //    //information "button"
 //    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
