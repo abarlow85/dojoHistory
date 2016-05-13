@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import AddressBookUI
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, BackButtonDelegate {
  
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -76,6 +76,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //        pointsOfInterst.append(location as! [String : Double])
 //        print(pointsOfInterst)
 //    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegueWithIdentifier("infoButtonPressed", sender: view)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "infoButtonPressed" {
+            let location = sender! as! MKAnnotationView
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! annotationInfoViewController
+            controller.backButtonDelegate = self
+            controller.locationToView = location.annotation!.title!
+        }
+    }
+    func backButtonPressedFrom(controller: UIViewController){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
 //    //information "button"
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
