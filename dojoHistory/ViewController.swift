@@ -99,23 +99,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     //Find users locations
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
-        self.mapView.setRegion(region, animated: true)
+//        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+//        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
+//        self.mapView.setRegion(region, animated: true)
         
-        self.locationManager.stopUpdatingLocation()
+//        self.locationManager.stopUpdatingLocation()
         //comparing distance between user and pin...not functional
         for landmark in annotations {
-            print("in here")
+//            let pin = CLLocation(latitude: 37.338208, longitude: -121.886329)
             let pin = CLLocation(latitude: landmark.coordinate.latitude, longitude: landmark.coordinate.longitude)
-            let user = self.mapView.userLocation.location
-            print(user)
-//            if let user = mapView.userLocation.location {
-//                print(user)
-//                if pin.distanceFromLocation(user) < 100000 {
-//                    print(landmark.title)
-//                }
-//            }
+//            let user = MKUserLocation.self
+            if pin.distanceFromLocation(location!) < 70 {
+                print(pin.distanceFromLocation(location!))
+                if landmark.title! == "The Bread Basket" {
+                    print(landmark.title!)
+                }
+            }
         }
     }
     
