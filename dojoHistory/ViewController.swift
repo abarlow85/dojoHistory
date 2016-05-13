@@ -82,7 +82,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
 //        print(annotations)
         mapView.addAnnotations(annotations)
-        centerMapOnLocation(annotations[0], regionRadius: 100000.0)
+        centerMapOnLocation(annotations[0], regionRadius: 50000.0)
         
     }
     
