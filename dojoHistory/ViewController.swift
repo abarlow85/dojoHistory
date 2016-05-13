@@ -96,6 +96,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         return pin
     }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegueWithIdentifier("infoButtonPressed", sender: view)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: MKAnnotationView?) {
+        if segue.identifier == "infoButtonPressed" {
+            let controller = navigationController.topViewController as! annotationViewController
+            controller.BackButtonDelegate = self
+            controller.locationToView = sender!.annotation.title
+        }
+    }
+    
     //Find users locations
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
