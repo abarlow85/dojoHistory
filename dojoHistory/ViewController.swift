@@ -53,18 +53,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         //build annotation pins
         var annotations = [MKPointAnnotation]()
-//        for dictionary in pointsOfInterst {
-//            let latitude = CLLocationDegrees(dictionary["Latitude"] as! Double!)
-//            let longitude = CLLocationDegrees(dictionary["Longitude"] as! Double!)
-//            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//            let name = dictionary["name"] as! String!
-//            let annotation = MKPointAnnotation()
-//            annotation.coordinate = coordinate
-//            annotation.title = "\(name)"
-//            annotations.append(annotation)
-//        }
-//        //        print(annotations)
-//        mapView.addAnnotations(annotations)
+        for dictionary in pointsOfInterst {
+            let latitude = CLLocationDegrees(dictionary["Latitude"] as! Double!)
+            let longitude = CLLocationDegrees(dictionary["Longitude"] as! Double!)
+            let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let name = dictionary["name"] as! String!
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = "\(name)"
+            annotations.append(annotation)
+        }
+                print(annotations.count)
+        mapView.addAnnotations(annotations)
         
     }
 //
@@ -74,19 +74,22 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //    }
     
 //    //information "button"
-//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-//        let reuseIdentifier = "pin"
-//        var pin = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier) as? MKPinAnnotationView
-//        if pin == nil {
-//            pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-//            pin!.pinColor = .Red
-//            pin!.canShowCallout = true
-//            pin!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
-//        } else {
-//            pin!.annotation = annotation
-//        }
-//        return pin
-//    }
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        let reuseIdentifier = "pin"
+        var pin = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier) as? MKPinAnnotationView
+        if pin == nil {
+            pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+//            pin!.pinTintColor = .Red
+            pin!.canShowCallout = true
+            pin!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        } else {
+            pin!.annotation = annotation
+        }
+        return pin
+    }
     //Find users locations
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
