@@ -17,7 +17,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     let locationManager = CLLocationManager()
     var annotations = [MKPointAnnotation]()
 
-    
     //    var didLoad = false
     //FORWARD GEOCODING
     //    func forwardGeocoding(address: String){
@@ -65,6 +64,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             annotation.title = "\(name)"
+            annotation.subtitle = ""
             annotations.append(annotation)
         }
                 print(annotations.count)
@@ -108,12 +108,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 //            let pin = CLLocation(latitude: 37.338208, longitude: -121.886329)
             let pin = CLLocation(latitude: landmark.coordinate.latitude, longitude: landmark.coordinate.longitude)
 //            let user = MKUserLocation.self
-            if pin.distanceFromLocation(location!) < 70 {
-                print(pin.distanceFromLocation(location!))
-                if landmark.title! == "The Bread Basket" {
-                    print(landmark.title!)
+            let radius = 70.0
+            if pin.distanceFromLocation(location!) < radius {
+                if landmark.subtitle! == "in" {
+                } else if landmark.subtitle! == "" {
+                    placesNotification(landmark)
                 }
+//                print(pin.distanceFromLocation(location!))
+//                if landmark.title! == "The Bread Basket" {
+//                    print(landmark.title!)
+//                }
+            } else {
+                landmark.subtitle = ""
             }
+            
         }
     }
     
@@ -122,16 +130,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
 
     
-    func placesNotification () {
+    func placesNotification(landmark: MKPointAnnotation) {
         // create a corresponding local notification
-        var notification = UILocalNotification()
-        notification.alertBody = "this is a new place" // text that will be displayed in the notification
-        notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.fireDate = NSDate(timeIntervalSinceNow: 10) // todo item due date (when notification will be fired)
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.userInfo = ["test": "test place"] // assign a unique identifier to the notification so that we can retrieve it later
-        notification.category = "PLACES_CATEGORY"
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        if landmark.subtitle! != "in" {
+            var notification = UILocalNotification()
+            notification.alertBody = "You are close to \(landmark.title!)" // text that will be displayed in the notification
+            landmark.subtitle = "in"
+            notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+            notification.fireDate = NSDate(timeIntervalSinceNow: 2) // todo item due date (when notification will be fired)
+            notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+            notification.userInfo = ["test": "test place"] // assign a unique identifier to the notification so that we can retrieve it later
+            notification.category = "PLACES_CATEGORY"
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
+        
     }
 
     
