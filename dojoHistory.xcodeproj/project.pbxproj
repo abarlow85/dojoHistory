@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59D70E721CE55D5500643EF5 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D70E711CE55D5500643EF5 /* LocationModel.swift */; };
+		70ACA3561CE5861800A839B0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ACA3551CE5861800A839B0 /* LocationModel.swift */; };
 		70FA3E681CE5057200509F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E671CE5057200509F40 /* AppDelegate.swift */; };
 		70FA3E6A1CE5057200509F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA3E691CE5057200509F40 /* ViewController.swift */; };
 		70FA3E6D1CE5057200509F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FA3E6B1CE5057200509F40 /* Main.storyboard */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		59D70E711CE55D5500643EF5 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationModel.swift; path = ../../../../../../../Downloads/LocationModel.swift; sourceTree = "<group>"; };
+		70ACA3551CE5861800A839B0 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		70FA3E641CE5057200509F40 /* dojoHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dojoHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FA3E671CE5057200509F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70FA3E691CE5057200509F40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				70FA3E671CE5057200509F40 /* AppDelegate.swift */,
 				70FA3E691CE5057200509F40 /* ViewController.swift */,
-				59D70E711CE55D5500643EF5 /* LocationModel.swift */,
+				70ACA3551CE5861800A839B0 /* LocationModel.swift */,
 				70FA3E6B1CE5057200509F40 /* Main.storyboard */,
 				70FA3E711CE5057200509F40 /* Assets.xcassets */,
 				70FA3E731CE5057200509F40 /* LaunchScreen.storyboard */,
@@ -263,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D70E721CE55D5500643EF5 /* LocationModel.swift in Sources */,
+				70ACA3561CE5861800A839B0 /* LocationModel.swift in Sources */,
 				70FA3E6A1CE5057200509F40 /* ViewController.swift in Sources */,
 				70FA3E701CE5057200509F40 /* dojoHistory.xcdatamodeld in Sources */,
 				70FA3E681CE5057200509F40 /* AppDelegate.swift in Sources */,
