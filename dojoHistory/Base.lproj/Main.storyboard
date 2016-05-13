@@ -17,11 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-BR-UZ9">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmE-BR-UZ9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cmE-BR-UZ9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2Nl-LY-rtU"/>
+                            <constraint firstItem="cmE-BR-UZ9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="adv-hR-PC2"/>
+                            <constraint firstAttribute="trailing" secondItem="cmE-BR-UZ9" secondAttribute="trailing" id="d26-6p-VTw"/>
+                            <constraint firstItem="cmE-BR-UZ9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x4g-Fm-2ba"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="cmE-BR-UZ9" id="lR4-4C-B2D"/>
