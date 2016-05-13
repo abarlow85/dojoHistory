@@ -44,7 +44,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         
         super.viewDidLoad()
-
         let model = LocationModel()
         let pointsOfInterst = model.data as NSArray
         mapView.delegate = self
@@ -121,4 +120,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error: " + error.localizedDescription)
     }
+
+    
+    func placesNotification () {
+        // create a corresponding local notification
+        var notification = UILocalNotification()
+        notification.alertBody = "this is a new place" // text that will be displayed in the notification
+        notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10) // todo item due date (when notification will be fired)
+        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+        notification.userInfo = ["test": "test place"] // assign a unique identifier to the notification so that we can retrieve it later
+        notification.category = "PLACES_CATEGORY"
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+
+    
+    
+
 }
