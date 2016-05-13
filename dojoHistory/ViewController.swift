@@ -36,11 +36,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     //            }
     //        })
     ////        print(pointsOfInterst)
+
     //    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        
+        super.viewDidLoad()
+
         let model = LocationModel()
         let pointsOfInterst = model.data as NSArray
         mapView.delegate = self
@@ -102,7 +105,4 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error: " + error.localizedDescription)
     }
-    
-
 }
-
